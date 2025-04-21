@@ -1,21 +1,20 @@
-# @data-structures/graph-toolkit
+# @emmett08/graph-toolkit
+
+This is a work in progress. 
 
 A TypeScript toolkit providing robust data structures and algorithms for directed and undirected graphs. Designed for performance and extensibility, it adheres to SOLID principles and includes serialisation, traversal, cycle detection, topological sorting and rendering capabilities.
 
 ## Features
 
 - **Graph representation**: Nodes, edges, stores and events
-- **Traversal strategies**: Depth-first, breadth-first and custom strategies
 - **Cycle detection**: Tarjan’s algorithm and configurable strategies
 - **Topological sorting**: Efficient ordering for directed acyclic graphs
-- **Serialisation**: Convert graphs to/from JSON-ready formats
 - **Rendering**: Utilities to render graph structures programmatically
 
 ## Installation
 
 ```shell
-# Install via Yarn
-yarn add @data-structures/graph-toolkit
+yarn add @emmett08/graph-toolkit
 ```
 
 ## Build, Lint and Test
@@ -40,20 +39,17 @@ yarn npm publish --access public
 ## Usage
 
 ```ts
-import { Graph, GraphTraversal, TopologicalSortStrategy } from '@data-structures/graph-toolkit';
+import { Graph, GraphTraversal, TopologicalSortStrategy } from '@emmett08/graph-toolkit';
 
-// Create a directed graph
 const graph = new Graph<string>();
 
-// Add nodes and edges
 graph.addNode('A');
 graph.addNode('B');
 graph.addEdge('A', 'B');
 
-// Topological sort
 const sorter = new GraphTraversal(graph, new TopologicalSortStrategy<string>());
 const order = sorter.traverse();
-console.log(order); // e.g. ['A', 'B']
+console.log(order);
 ```
 
 ## Reference
