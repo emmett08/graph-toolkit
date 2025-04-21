@@ -1,5 +1,5 @@
 {
-  "name": "@data-structures/graph-toolkit",
+  "name": "@emmett08/graph-toolkit",
   "version": "1.0.0",
   "description": "A TypeScript toolkit for graph data structures and algorithms",
   "main": "dist/index.js",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-org/graph-toolkit.git"
+    "url": "https://github.com/emmett08/graph-toolkit.git"
   },
   "keywords": [
     "graph",
@@ -26,9 +26,9 @@
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/your-org/graph-toolkit/issues"
+    "url": "https://github.com/emmett08/graph-toolkit/issues"
   },
-  "homepage": "https://github.com/your-org/graph-toolkit#readme",
+  "homepage": "https://github.com/emmett08/graph-toolkit#readme",
   "devDependencies": {
     "@types/jest": "^29.5.14",
     "@types/node": "^22.14.1",
@@ -36,6 +36,7 @@
     "@typescript-eslint/parser": "^8.31.0",
     "eslint": "^9.25.1",
     "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
     "ts-jest": "^29.3.2",
     "typescript": "^5.8.3"
   }

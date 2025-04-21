@@ -1,0 +1,41 @@
+@startuml
+start
+
+:Start new iteration;
+repeat
+
+  :Scan count list;
+  :Search for a zero in count;
+
+  if (Found zero?) then (yes)
+    :Reset count to -1;
+    :Assign serial number;
+    :Store serial and event index;
+    
+    if (Terminal event?) then (yes)
+      --> [Skip to next] repeat
+    else (no)
+      :Set pointer to first activity;
+
+      repeat
+        :Use cross-reference to find activity;
+        :Decrement successor's count;
+
+        if (Successor's count == 0?) then (yes)
+          :Mark successor count as -1;
+          :Add to list of zeros;
+        endif
+
+        :Advance to next activity;
+      repeat while (More successors?)
+    endif
+
+  else (no)
+    :No zero found;
+    break
+  endif
+
+repeat while (More events to process?)
+
+stop
+@enduml
