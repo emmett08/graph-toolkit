@@ -1,6 +1,6 @@
 {
   "name": "@emmett08/graph-toolkit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A TypeScript toolkit for graph data structures and algorithms",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
