@@ -27,31 +27,6 @@ yarn lint
 yarn test
 ```
 
-## Publishing
-
-When you’re ready to release a new version:
-
-```shell
-yarn npm login
-yarn npm publish --access public
-```
-
-## Usage
-
-```ts
-import { Graph, GraphTraversal, TopologicalSortStrategy } from '@emmett08/graph-toolkit';
-
-const graph = new Graph<string>();
-
-graph.addNode('A');
-graph.addNode('B');
-graph.addEdge('A', 'B');
-
-const sorter = new GraphTraversal(graph, new TopologicalSortStrategy<string>());
-const order = sorter.traverse();
-console.log(order);
-```
-
 ## Reference
 
 For an authoritative treatment of topological sorting, see:
