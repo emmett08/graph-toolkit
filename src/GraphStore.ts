@@ -21,8 +21,14 @@ export class GraphStore<NodeType extends GraphNode, LinkProps> implements IGraph
         this.edges.delete(node.id);
         this.weights.delete(node.id);
         this.properties.delete(node.id);
-        for (const neighbours of this.edges.values()) {
-            neighbours.forEach(n => { if (n.id === node.id) neighbours.delete(n) })
+        for (const [srcId, neighbours] of this.edges.entries()) {
+            neighbours.forEach(n => {
+                if (n.id === node.id) {
+                    neighbours.delete(n)
+                    this.weights.get(srcId)?.delete(node.id)
+                    this.properties.get(srcId)?.delete(node.id)
+                }
+            })
         }
     }
 
