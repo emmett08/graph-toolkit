@@ -23,7 +23,7 @@ export class GraphSerialiser<NodeType extends GraphNode, LinkProps> {
         return { nodes, edges }
     }
 
-    deserialise(data: SerialisedGraph<NodeType, LinkProps>) {
+    deserialise(data: SerialisedGraph<NodeType, LinkProps>): Graph<NodeType, LinkProps> {
         const g = new Graph<NodeType, LinkProps>()
         const map = new Map(data.nodes.map(n => [n.id, n] as const))
         data.nodes.forEach(n => g.addNode(n))
